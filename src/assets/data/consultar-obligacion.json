@@ -1,0 +1,64 @@
+{
+    "status": "INFO",
+    "errorCode": "0",
+    "message": "Proceso exitoso!",
+    "data": [
+        {
+            "_id": {
+                "$oid": "5f11c866e90a6d5089ca3bd1"
+            },
+            "numberAccount": "T72Kcuxi5KxkDKliEUwnnPilDuSX56MhfuN8PIMnFuo=",
+            "balance": 30.1,
+            "idProduct": 23,
+            "interestBalance": 30.1,
+            "originalBalance": 30.1,
+            "timeLeft": 1,
+            "lastEntranceDate": "2020-01-01 21:21:20",
+            "minPayment": 30.1,
+            "accountStatus": "AL DIA",
+            "company": {
+                "name": "COMUNICACIÓN CELULAR S.A COMCEL S.A",
+                "nit": "800153993"
+            },
+            "ofuscateNumberAccount": "************4909",
+            "consumerArrangement": {
+                "arrangementDate": "2020-05-28 00:00:00",
+                "arrangementAmount": 1845615.0,
+                "paymentAgreements": [
+                    {
+                        "agreementDate": "2020-06-02 00:00:00",
+                        "agreementAmount": 553684.5
+                    },
+                    {
+                        "agreementDate": "2020-07-02 00:00:00",
+                        "agreementAmount": 645965.25
+                    },
+                    {
+                        "agreementDate": "2020-08-02 00:00:00",
+                        "agreementAmount": 645965.25
+                    }
+                ]
+            }
+        },
+        {
+            "_id": {
+                "$oid": "5f171cd0160d792791b0302c"
+            },
+            "numberAccount": "T72Kcuxi5KxkDKliEUwnnPilDuSX56MhfuN8PIMnFuo=",
+            "balance": 30.1,
+            "idProduct": 23,
+            "interestBalance": 30.1,
+            "originalBalance": 30.1,
+            "timeLeft": 1,
+            "lastEntranceDate": "2020-01-01 21:21:20",
+            "minPayment": 30.1,
+            "accountStatus": "AL DIA",
+            "company": {
+                "name": "COMUNICACIÓN CELULAR S.A COMCEL S.A",
+                "nit": "800153993"
+            },
+            "ofuscateNumberAccount": "************4909",
+            "consumerArrangement": {}
+        }
+    ]
+}

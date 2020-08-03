@@ -1,0 +1,40 @@
+{
+    "status": "INFO",
+    "errorCode": "0",
+    "message": "Proceso exitoso!",
+    "data": [
+        {
+            "newBalance": 747495.6,
+            "company": {
+                "name": "BANCO DE BOGOTA",
+                "nit": "12345678"
+            },
+            "idProduct": 23,
+            "newInterestBalance": 0.1,
+            "newTimeLeft": 2,
+            "isNatural": 1,
+            "newMinPayment": 23000.0,
+            "paymentMonthly": 373747.80,
+            "agreement": {
+                "nit": "12345678",
+                "date": "2020-07-23T13:37:27.972+0000",
+                "payment": 747495.6,
+                "totalPayments": 2,
+                "paymentAgreements": [
+                    {
+                        "date": "2020-07-23T13:37:27.972+0000",
+                        "quota": 1,
+                        "Date": "2020-07-23T13:37:27.972+0000",
+                        "amount": 373747.80
+                    },
+                    {
+                        "date": "2020-08-23T13:37:27.972+0000",
+                        "quota": 2,
+                        "Date": "2020-08-23T13:37:27.972+0000",
+                        "amount": 373747.80
+                    }
+                ]
+            }
+        }
+    ]
+}
