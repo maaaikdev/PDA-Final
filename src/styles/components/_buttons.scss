@@ -186,7 +186,7 @@
     }
   }
   &.w-100-btn {
-    width: 40%;
+    width: 100%;
   }    
   &.btn-orange{
     background-color: $terciary-color;
@@ -211,10 +211,11 @@
   }
   &.btn-outline-white{
     border: 1px #fff solid;
-    color:$white;
-    background-color: $white;
+    color:$white;   
+    background-color: transparent; 
     &:hover {
-
+      background-color: $white;
+      color: $main-color;
     }
     span {
       font-family: $roboto;

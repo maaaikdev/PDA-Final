@@ -1,27 +1,44 @@
 @import "../../../../styles.scss";
 
 #sign {
+    .modal-dialog{
+        @media(max-width: 767px){
+            margin: 0;
+        }
+    }
     .modal-content {
         padding: 10px;
         border-radius: 20px;
         height: auto;
         background-size: cover;
         max-height: 599px;
+        @media(max-width: 767px){
+            border-radius: 0;
+            padding: 10px 0;
+        }
 
         .cerrar {
             position: absolute;
-            color: $blue;
-            font-size: 48px;
+            color: $main-color;
+            font-size: 38px;
             right: -2px;
             cursor: pointer;
             line-height: 24px;
             top: -8px;  
+            font-weight: 100;
+            @media(max-width: 767px){
+                font-size: 24px;
+            }
         }
 
         .modalTitle {
             color: $black;
             font: $light 30px/36px $din;
             margin-bottom: 32px;
+            @media(max-width:767px){
+                font: $light 26px/36px $din;
+                margin-bottom: 16px;
+            }
         }
         .line {
             border: 1px solid #F2F2F2;
@@ -30,12 +47,18 @@
             display: block;
         }
         .textoRegulatorio {
-            font: $regular 14px/22px $roboto;
+            font-family: $roboto;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 300;
             color: $mid-gray;
             margin-top: 21px;
-            height: 370px;
+            height: 320px;
             overflow: auto;
             margin-bottom: 10px;
+            @media(max-width:767px){
+                height: 240px;
+            }
 
             span {
                 font: $light 18px/22px $din;
@@ -44,7 +67,9 @@
         }
         .contentBotones {
             margin-top: 27px;
-
+            @media(max-width:767px){
+                margin-top:16px;
+            }
             .botones {
                 width: 100%;
                 height: 40px;
@@ -57,12 +82,20 @@
                 letter-spacing: 0.45px;
                 padding-top: 9px;
                 position: relative;
-    
+                @media(max-width:767px){
+                    margin-top:16px;
+                }
+                &.pink{
+                    background-color: $main-color;
+                    color: $white;
+                    &:hover{
+                        background-color: $secondary-color;
+                    }
+                }    
                 &:hover {
                     background-color: $main-color;
                     color: $white;
                 }
-
                 i {
                     position: absolute;
                     right: 19px;

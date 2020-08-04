@@ -7,6 +7,7 @@ declare var $: any;
 })
 export class SignService {
   check: any;
+  check2: any;
 
   constructor() { }
 
@@ -28,6 +29,14 @@ export class SignService {
       this.check = 0;
     } else if(this.check != 1) {
       this.check = 1;
+    }
+  }
+
+  acceptCheckService2() {
+    if(this.check2 == 1) {
+      this.check2 = 0;
+    } else if(this.check != 1) {
+      this.check2 = 1;
     }
   }
 

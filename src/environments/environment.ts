@@ -17,7 +17,7 @@ export const environment = {
   APIEndpoint_ngttion: 'https://pontealdia.midatacredito.com/ngttion-ws',
   
   negociarObligaciones: '/midatacredito/pontealdia/v1/obligation/offer',
-  consultarObligaciones: '/midatacredito/pontealdia/v1/obligation/list',
+  // consultarObligaciones: '/midatacredito/pontealdia/v1/obligation/list',
   guardarPropuestaObligacion: '/midatacredito/pontealdia/v1/obligation/agreement',
 
   consultaDeudas: '/midatacredito/pontealdia/v1/debt',

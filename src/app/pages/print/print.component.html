@@ -127,26 +127,44 @@
 					<div class="col-12 col-md-12">
 						<div class="payments">
 							<div class="titlePayments">Programación de pago</div>
-							<div class="tHeader">
-								<div class="short">No.</div>
-								<div class="large">Fecha</div>
-								<div class="large">Valor pago</div>
-								<div class="short">Estado</div>
+							<div>
+								<div class="tHeader d-none d-md-block">
+									<div class="short">No.</div>
+									<div class="large">Fecha</div>
+									<div class="large">Valor pago</div>
+									<div class="short">Estado</div>
+								</div>
 							</div>
 							<div *ngIf="select.offer" class="tCell">
-								<div class="filePay" *ngFor="let item of select.offer.agreement.paymentAgreements">
-									<div class="short">{{item.quota}}</div>
-									<div class="large">{{item.date | date: 'dd MMMM yyyy' }}</div>
-									<div class="large">$ {{item.amount | currency:'COP':'':'1.2-2'}}</div>
-									<div class="short">Programado</div>
+								<div *ngFor="let item of select.offer.agreement.paymentAgreements">
+									<div class="tHeader d-inline-block d-md-none">
+										<div class="short">No.</div>
+										<div class="large">Fecha</div>
+										<div class="large">Valor pago</div>
+										<div class="short">Estado</div>
+									</div>
+									<div class="filePay">
+										<div class="short">{{item.quota}}</div>
+										<div class="large">{{item.date | date: 'dd MMMM yyyy' }}</div>
+										<div class="large">$ {{item.amount | currency:'COP':'':'1.2-2'}}</div>
+										<div class="short">Programado</div>
+									</div>
 								</div>
 							</div>
 							<div *ngIf="select.state" class="tCell">
-								<div class="filePay" *ngFor="let item2 of select.state.agreement.paymentAgreements">
-									<div class="short">{{item2.number}}</div>
-									<div class="large">{{item2.agreementDate | date: 'dd MMMM yyyy' }}</div>
-									<div class="large">$ {{item2.agreementAmount | currency:'COP':'':'1.2-2'}}</div>
-									<div class="short">Programado</div>
+								<div *ngFor="let item2 of select.state.agreement.paymentAgreements">
+									<div class="tHeader d-inline-block d-md-none">
+										<div class="short">No.</div>
+										<div class="large">Fecha</div>
+										<div class="large">Valor pago</div>
+										<div class="short">Estado</div>
+									</div>
+									<div class="filePay">
+										<div class="short">{{item2.number}}</div>
+										<div class="large">{{item2.agreementDate | date: 'dd MMMM yyyy' }}</div>
+										<div class="large">$ {{item2.agreementAmount | currency:'COP':'':'1.2-2'}}</div>
+										<div class="short">Programado</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -161,7 +179,7 @@
 						<p class="agreement">Ten tu acuerdo siempre a la mano.</p>
 					</div>
 					<div class="imgAgree">
-						<img class="imgDocDownload d-none d-md-inline-block pdf-download" src="assets/icons/pdf.svg" alt="Descargar acuerdo"/>
+						<img class="imgDocDownload d-none d-md-block pdf-download" src="assets/icons/pdf.svg" alt="Descargar acuerdo"/>
 						<img class="imgDocDownload d-block d-md-none" src="assets/images/all/Descargar_AdP.svg" alt="Acuerdo"/>
 					</div>
 					<div class="botones">

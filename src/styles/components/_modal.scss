@@ -1,6 +1,9 @@
 .modal-header {
   border: none;
   padding: 5px 20px;
+  @media(max-width:767px){
+    padding: 5px 0;
+  }
   .close {
     color: $main-color;
     font-weight: $light;

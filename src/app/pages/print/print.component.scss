@@ -178,16 +178,35 @@
             border-radius: 10px;
             padding: 20px 25px;
             clear: both;
-
+            @media(max-width:767px){
+                padding: 20px 18px;
+            }
             .subtitle {
                 font: $light 24px/29px $din;
                 color: $black;
                 margin-bottom: 19px;
+                @media(max-width:767px){
+                    font: $light 22px/28px $din;
+                }
             }
             .textSteps {
                 font: $light 12px/16px $roboto;
                 color: $txt-gray;
                 letter-spacing: 0.24px;
+                ol {
+                    @media(max-width:767px){
+                        padding-inline-start: 22px!important;
+                    }
+                    li {
+                        ul {
+                            ul {
+                                @media(max-width:767px){
+                                    padding-inline-start: 22px!important;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         .rightTitle {
@@ -236,10 +255,13 @@
                 float: left;
                 color: $txt-gray;
                 margin-bottom: 12px;
+                @media(max-width:767px){
+                    color: $black;
+                }
                 &.mobile-100 {
                     @media(max-width:767px){
                         width: 100%;
-                        display: block;
+                        display: block;                        
                     }
                 }
             }
@@ -250,8 +272,7 @@
             color: $gray;
             width: 100%;
             max-width: 649px;
-            border-bottom: 1px solid $light-gray;
-            padding-bottom: 34px;
+            padding-bottom: 0;
 
             .titlePayments {
                 font: $bold 14px/17px $roboto;
@@ -264,7 +285,7 @@
                 color: $gray;
                 display: flex;
                 margin: 18px 0 17px;
-                padding-bottom: 9px;
+                padding-bottom: 24px;
                 font-size: 14px;
                 @media(max-width:767px){
                     width: 50%;
@@ -280,10 +301,9 @@
                         width: 100%;
                         float: initial;
                         display: block;
-                        margin-bottom: 12px;
                         color:$black;
                         border-bottom: 1px $gray solid;
-                        padding:6px;
+                        padding: 10px 6px;
                     }        
                 }
                 .large {
@@ -293,17 +313,16 @@
                         width: 100%;
                         float: initial;
                         display: block;
-                        margin-bottom: 12px;
                         color:$black;
                         border-bottom: 1px $gray solid;
-                        padding:6px;
+                        padding: 10px 6px;
                     }
                 }
             }
             .tCell {
                 font-size: 14px;
                 @media(max-width:767px){
-                    width: 50%;
+                    width: 100%;
                     display: inline-block;
                     padding: 0;
                 }
@@ -312,7 +331,8 @@
                     display: flex;
                     @media(max-width:767px){
                         margin-bottom: 0;
-                        display: initial;
+                        display: inline-block;
+                        width: 50%;
                     }
                     .short {
                         width: 20%;
@@ -321,9 +341,8 @@
                             width: 100%;
                             float: initial;
                             display: block;
-                            margin-bottom: 12px;
-                            border-bottom: 1px $gray solid;
-                            padding:6px;
+                            border-bottom: 1px $light-gray solid;
+                            padding: 10px 6px;
                         }
                     }
                     .large {
@@ -333,9 +352,8 @@
                             width: 100%;
                             float: initial;
                             display: block;
-                            margin-bottom: 12px;
                             border-bottom: 1px $gray solid;
-                            padding:6px;
+                            padding: 10px 6px;
                         }
                     }
                 }

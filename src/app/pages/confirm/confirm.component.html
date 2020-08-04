@@ -24,7 +24,8 @@
 					Previsualización de firma
 				</div>
 				<div class="description">
-					<input *ngIf="sign.check == 1" checked type="checkbox" (click)='acceptCheck()' id="acepto" name="acepto" /><input *ngIf="sign.check != 1" type="checkbox" (click)='acceptCheck()' id="acepto" name="acepto" /> Estoy de acuerdo con la <a (click)='openSignature()'>Regulación de Firma Electrónica (ABRIR)</a>
+					<input *ngIf="sign.check == 1" checked type="checkbox" (click)='acceptCheck()' id="acepto" name="acepto" />
+					<input *ngIf="sign.check != 1" type="checkbox" (click)='acceptCheck()' id="acepto" name="acepto" /> Estoy de acuerdo con la <a (click)='openSignature()'>Regulación de Firma Electrónica (ABRIR)</a>
 				</div>
 				<div class="finish">
 					<button *ngIf="sign.check == 1" (click)='confirmOffer(select.offer)'>Terminar <i class="fa fa-angle-right" aria-hidden="true"></i></button>
@@ -61,7 +62,7 @@
 							<div class="left right" *ngIf="!agree.agreements.isObligation">{{select.offer.paymentDate | date: 'dd MMMM yyyy'}}</div>
 							<div class="left right" *ngIf="agree.agreements.isObligation">{{select.offer.agreement.date | date: 'dd MMMM yyyy'}}</div>
 						</div>
-						<button class="btn-pda btn-link" id="SeeProgram" (click)="open(select.offer.agreement.paymentAgreements)">
+						<button class="btn-l btn-link" id="SeeProgram" (click)="open(select.offer.agreement.paymentAgreements)">
 							<i class="fa fa-calculator" aria-hidden="true"></i>
 							<span>Ver programación de pagos</span>
 						</button>

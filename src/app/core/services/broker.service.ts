@@ -52,12 +52,12 @@ export class BrokerService {
     return this.http.post(environment.APIEndpoint_debts + environment.negociarObligaciones, body, { headers });
   }
 
-  findObligations() {
-    const body = JSON.stringify({
-      sessionID: this.cookieService.get('IDSESSIONMDC')
-    });
-    return this.http.post(environment.APIEndpoint_debts + environment.consultarObligaciones, body, { headers });
-  }
+  // findObligations() {
+  //   const body = JSON.stringify({
+  //     sessionID: this.cookieService.get('IDSESSIONMDC')
+  //   });
+  //   return this.http.post(environment.APIEndpoint_debts + environment.consultarObligaciones, body, { headers });
+  // }
 
   guardarPropuestaObligacion(body){
     return this.http.post(environment.APIEndpoint_debts + environment.guardarPropuestaObligacion, body, {headers});

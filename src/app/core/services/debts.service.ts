@@ -243,12 +243,10 @@ export class DebtsService {
   limpiarFiltros() {
     for (const companie of this.filters.companies ) {
       companie.checked = false;
-      $(".btn-company").remove('.d-inline-block'); 
       $('.btn_class').remove();
     }
     for (const state of this.filters.state ) {
       state.checked = false;
-      $(".btn-statusAll").remove('.d-inline-block');
       $('.btn_status').remove();
     }
 

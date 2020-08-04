@@ -126,7 +126,7 @@
     overflow-x: auto;
     overflow-y: hidden;
     width: auto;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px 0px;
     @media(max-width:767px){
       padding: 30px 0px 0;
@@ -135,7 +135,7 @@
     @media (min-width: 768px) {
       display: flex;
       overflow: inherit;
-      padding: 0px;
+      padding-left: 2%;
     }
     .pj1 {
       left: 3%;

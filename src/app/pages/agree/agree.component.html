@@ -28,7 +28,7 @@
 				<div class="col-12 mx-auto col-md-4 centerButton">
 					<!-- <button class="btn btn-outline round" (click)="openModal(debtService.debtSelect)">
 						<img class="icon" src="assets/icons/calculadora.svg" alt="">Hacer otra propuesta</button> -->
-					<button class="btn-pda btn-outline-pink" id="agreeMore" *ngIf="!obligation" (click)="openModal(debtService.debtSelect)">
+					<button class="btn btn-outline-pink" id="agreeMore" *ngIf="!obligation" (click)="openModal(debtService.debtSelect)">
 						<i class="fa fa-calculator" aria-hidden="true"></i>
 						<span>Hacer otra propuesta</span>
 						<!-- <i class="arrow right"></i> -->
@@ -66,11 +66,11 @@
 							<span class="mr-auto">Inicio de pago</span> {{option.paymentDate | date: 'dd MMMM yyyy'}}
 						</div>
 					</div>
-					<button class="btn-pda btn-link" id="agreeMore" (click)='open(option.agreement.paymentAgreements)'>
+					<button class="btn-l btn-link" id="agreeMore" (click)='open(option.agreement.paymentAgreements)'>
 						<i class="fa fa-calculator" aria-hidden="true"></i>
 						<span>Ver programación de pagos</span>
 					</button>
-					<button class="btn-pda btn-pink" id="programacionDeuda" (click)='saveOffer(option)'>
+					<button class="btn btn-pink" id="programacionDeuda" (click)='saveOffer(option)'>
 						<span>Seleccionar acuerdo</span>
 						<i class="arrow right"></i>
 					</button>

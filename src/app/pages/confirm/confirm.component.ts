@@ -99,4 +99,8 @@ export class ConfirmComponent implements OnInit {
   acceptCheck() {
     this.sign.acceptCheckService();
   }
+
+  acceptCheck2() {
+    this.sign.acceptCheckService2();
+  }
 }

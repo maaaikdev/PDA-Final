@@ -1,38 +1,5 @@
 <section class="debt-main">
 	<div class="container-fluid">
-	<!-- <div class="row">
-			<div class="col-12 p-0">
-				<div class="title">
-					<div class="row">
-						<div class="col-12 col-md-12 order-0">
-							Administrador de deudas
-							<span *ngIf="debtsService.customerDebts?.responseObject.debts.length === 0" class="d-md-inline-block d-none">No tienes deudas por negociar</span>
-							<span *ngIf="debtsService.customerDebts?.responseObject.debts.length > 0" class="d-md-inline-block d-none">Tienes {{debtsService.customerDebts?.responseObject.debts.length}} deuda(s) por negociar</span>
-						</div>
-						<div class="col-12 col-md-12 d-block d-md-none order-2">
-							<span *ngIf="debtsService.customerDebts?.responseObject.debts.length === 0">No tienes deudas por negociar</span>
-							<span *ngIf="debtsService.customerDebts?.responseObject.debts.length > 0">Tienes {{debtsService.customerDebts?.responseObject.debts.length}} deuda(s) por negociar</span>
-						</div>
-						<div class="col-12 order-1">
-							<small>En Ponte al día podrás negociar las deudas que tengas pendientes con nuestras entidades aliadas</small>
-						</div>
-						<div class="col-12 order-3 d-block d-sm-none">
-							<a class="btn btn-filter mx-auto" data-toggle="modal" data-target="#filters">
-								<i class="fa fa-filter mr-2" aria-hidden="true"></i> Filtrar 
-							</a>
-						</div>
-						<div class="col-12 order-3 d-block d-sm-none text-left">
-							<div class="btn-company"></div>
-							<div class="btn-statusAll" ></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-		<!-- <div class="col-12 order-3 d-block d-sm-none text-left">
-							<div class="btn-company"></div>
-							<div class="btn-statusAll" ></div>
-						</div> -->
 		<div class="row" >			
 			<div class="col-12 col-md-3 col-xxl-2 nav-main order-1 order-md-0">				
 				<!-- <app-dfilters></app-dfilters> -->
@@ -41,13 +8,13 @@
 					<h2>Conocer tu historia de crédito puede ayudar a mejorar tu vida financiera.</h2>
 					<p>Te ayudamos a llevar a otro nivel tu perfil crediticio. Conoce tu historia de crédito Gratis.</p>
 					<img src="assets/images/all/go_freemium.svg" alt="Fremium Mi Datacrédito" class="img-secondary"/>
-					<button class="btn-pda btn-outline-white" id="midatacreditoGo">
+					<button class="btn-pda btn-outline-white w-100-btn" id="midatacreditoGo">
 						<span>Ir a Midatacrédito</span>
 						<i class="fa fa-chevron-right" aria-hidden="true"></i>
 					</button>
 				</div>
 				<div class="debts-today" *ngIf="debtsToday">
-					<button class="btn-main" (click)="obligaciones()">
+					<button class="btn-main" (click)="obligaciones()" id="btnObligations">
 						<div class="icon-main">
 							<img src="assets/images/all/obligaciones_negociables_icon.svg" alt="Obligaciones Negociables"/>
 						</div>
@@ -56,7 +23,7 @@
 						</div>
 						<div class="counts-debts">{{activeObligation}}</div>
 					</button>
-					<button class="btn-main" (click)="reportes()">
+					<button class="btn-main" (click)="reportes()" id="btnNegativeReports">
 						<div class="icon-main">
 							<img src="assets/images/all/reportes_negociables_icon.svg" alt="Obligaciones Negociables"/>
 						</div>
@@ -65,17 +32,6 @@
 						</div>
 						<div class="counts-debts">{{activeDebts}}</div>
 					</button>
-				<!--
-					<button class="btn-main" (click)="oReportes()">
-						<div class="icon-main">
-							<img src="assets/images/all/otros_reportes_icon.svg" alt="Otros Reportes"/>
-						</div>
-						<div class="btn-txt">
-							<h3>Otras Reportes</h3>
-						</div>
-						<div class="counts-debts">{{debtsService.debtLength}}</div>
-					</button>
-				-->
 				</div>
 			</div>
 			<div class="col-12 col-md-9 col-xxl-10 debts-all order-0 order-md-1">
@@ -111,7 +67,7 @@
 									<h5>$ 134.480 <span>x 1 mes</span></h5>
 								</div>
 								<div class="col-12 col-md-3 align-self-center order-3 order-md-3">
-									<button class="btn-pda btn-orange" id="midatacreditoOffer">
+									<button class="btn-pda btn-orange w-100-btn" id="midatacreditoOffer">
 										<span>Ver oferta</span>
 										<i class="fa fa-chevron-right" aria-hidden="true"></i>
 									</button>
@@ -208,18 +164,18 @@
 							<div class="col-12 col-md-2 debt-date align-self-center cell-50">
 								<span class="title-mob">Actualización </span>
 								<span class="currencyM">{{item.lastEntranceDate | date: 'dd MMMM yyyy' }}</span>
-							</div>
-							<div class="col-12 col-md-2 align-self-center" *ngIf="item.accountStatus == 'ACTIVA'">
-								<button class="btn-pda btn-outline-pink" id="negociarObligation" (click)="negotiateObligation(item)">
-									<span>Negociar</span>
+							</div>	
+							<div class="col-12 col-md-2 debt-cta align-self-center pl-md-0" *ngIf="item.accountStatuts == 'ACTIVA'">
+								<a class="btn-pda btn-pink" id="negociarObligation" (click)="negotiateObligation(item)">
+									<span>Negociar </span>
 									<i class="fa fa-chevron-right" aria-hidden="true"></i>
-								</button>
+								</a>
 							</div>
-							<div class="col-6 col-md-2 align-self-center" *ngIf="item.accountStatus != 'ACTIVA'">
-								<button class="btn-pda btn-outline-pink" id="verEstado" (click)='verEstado(item._id.$oid, item.company.nit, item.ofuscateNumberAccount, 2)'>
-									<span>Ver Estado</span>
+							<div class="col-12 col-md-2 debt-cta align-self-center pl-md-0" *ngIf="item.accountStatuts != 'ACTIVA'">
+								<a class="btn-pda btn-outline-pink" id="verEstadoObligation" (click)='verEstado(item._id.$oid, item.company.nit, item.ofuscateNumberAccount, 2)'>
+									<span>Ver estado </span>
 									<i class="fa fa-chevron-right" aria-hidden="true"></i>
-								</button>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -302,13 +258,13 @@
 								<span class="title-mob">Actualización </span>
 								<span class="d-block currencyM">{{item.dateDebt | date: 'dd MMMM yyyy' }}</span>
 							</div>
-							<div class="col-12 col-md-2 debt-cta align-self-center" *ngIf="item.accountStatuts == 'EN MORA'">
+							<div class="col-12 col-md-2 debt-cta align-self-center pl-md-0" *ngIf="item.accountStatuts == 'EN MORA'">
 								<a (click)="openDeal(item)" class="btn-pda btn-pink">
 									<span>Ponte al día </span>
 									<i class="fa fa-chevron-right" aria-hidden="true"></i>
 								</a>
 							</div>
-							<div class="col-12 col-md-2 debt-cta align-self-center" *ngIf="item.accountStatuts != 'EN MORA'">
+							<div class="col-12 col-md-2 debt-cta align-self-center pl-md-0" *ngIf="item.accountStatuts != 'EN MORA'">
 								<a (click)='verEstado(item.de, item.nitCompany, item.numberAccount, 1)' class="btn-pda btn-outline-pink">
 									<span>Ver estado </span>
 									<i class="fa fa-chevron-right" aria-hidden="true"></i>
@@ -401,7 +357,7 @@
 					<div class="txt-go">
 						<h3>Conocer tu historia de crédito puede ayudar a mejorar tu vida financiera.</h3>
 						<p>Te ayudamos a llevar a otro nivel tu perfil crediticio. Conoce tu historia de crédito Gratis.</p>
-						<button class="btn-pda btn-outline-pink" id="midatacreditoGo">
+						<button class="btn-pda btn-outline-pink w-45-btn" id="midatacreditoGo2">
 							<span>Ir a Midatacrédito</span>
 							<i class="fa fa-chevron-right" aria-hidden="true"></i>
 						</button>

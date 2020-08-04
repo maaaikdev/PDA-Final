@@ -27,7 +27,7 @@
       }
     }    
     .no-debts {
-      padding: 8% 10%;
+      padding: 8% 13%;
       @media(max-width:767px){
         display: flex;
         flex-direction: column;
@@ -64,6 +64,11 @@
           order:1;
         }
       }
+      .btn-outline-white {
+        @media(max-width: 767px){
+          order:4;
+        }
+      }
     }
     .debts-today {
       padding: 7% 0;
@@ -88,6 +93,12 @@
           padding: 35px 8px 8px;
         }
         &:hover {
+          background-color: $secondary-color;
+        }
+        &.activo {
+          background-color: $secondary-color;
+        }
+        &:active {
           background-color: $secondary-color;
         }
         .icon-main {
@@ -357,7 +368,7 @@
         .box-buscacredito {
           background-color: $white;
           border-radius: 6px;
-          padding: 16px;
+          padding: 16px 4%;
           margin: 24px auto;
           -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.37);
           -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.37);
@@ -413,9 +424,12 @@
           .note-buscacredito {
             background-color: $super-light-gray;
             padding: 12px 10%;
-            margin: 16px -16px -16px;
+            margin: 16px -34px -16px;
+            border-bottom-right-radius: 6px;
+            border-bottom-left-radius: 6px;
             @media(max-width:767px){
               padding: 12px 6%;
+              margin: 16px -11px -16px;
             }
             .img-buscacredito {
               width: 10%;
@@ -727,20 +741,38 @@
     }
     .go-freemium {
       margin: 32px 0;
+      @media(max-width:767px){
+        background-color: $main-color;
+        padding: 32px 24px 24px;
+        margin: 32px -9%;
+      }
       .img-go {
         width: 30%;
         display:inline-block;
         vertical-align: middle;
+        @media(max-width:767px){
+          width: 100%;
+          display:block;
+          margin-bottom: 24px;
+        }
         img {
           width: 175px;
           display: block;
           margin: 0 auto;
+          @media(max-width:767px){
+            width: 110px;
+          }
         }
       }
       .txt-go {
         width: 70%;
         display:inline-block;
         vertical-align: middle;
+        @media(max-width:767px){
+          width: 100%;
+          display:block;
+          margin-bottom: 24px;
+        }  
         h3 {
           font-family: din-2014, sans-serif;
           font-size: 28px;
@@ -748,6 +780,11 @@
           line-height: 36px;
           color:$black;
           margin-bottom: 8px;
+          @media(max-width:767px){
+            font-size: 24px;
+            color: $white;
+            line-height: 30px;        
+          }
         }
         p {
           font-family: din-2014, sans-serif;
@@ -756,6 +793,17 @@
           line-height: 24px;
           color:$txt-gray;
           margin: 0;
+          margin-bottom: 24px;
+          @media(max-width:767px){
+            color: $white;       
+          }
+        }
+        .btn-outline-pink {
+          @media(max-width:767px){
+            border: 1px #fff solid;
+            color:$white;   
+            background-color: transparent; 
+          }
         }
       }
     }

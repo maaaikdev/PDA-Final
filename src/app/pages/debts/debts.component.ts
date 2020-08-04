@@ -8,6 +8,7 @@ import { LoadingService } from 'src/app/core/services/loading.service';
 import { BrokerService } from 'src/app/core/services/broker.service';
 import { DealService } from 'src/app/core/services/deal.service';
 import { OfferSelectedService } from 'src/app/core/services/offer-selected.service';
+import { DOCUMENT } from '@angular/common';
 
 declare var $: any;
 
@@ -27,14 +28,16 @@ export class DebtsComponent implements OnInit {
   activeDebts: number = 0;
 
   // DEBTS
+  // No Debts
   noDebtsFreemium = false;
-  debtsToday = true;
   alertNoDebts = false;
+  // No Debts
+  debtsToday = true;  
   alertDebts = true;
-  obligacionesNegociables = true;
-  reportesNegociables = false;
+  obligacionesNegociables = false;
+  reportesNegociables = true;
   otrosReportes = false;
-  goFreemium = false;
+  goFreemium = true;  
 
   constructor(
     public debtModal: DealService,
@@ -59,9 +62,8 @@ export class DebtsComponent implements OnInit {
         }
       }
     });
-    this.getObligations();
-    this.consultarDeudas();
-
+    // this.getObligations();
+    this.consultarDeudas();   
 
   }
 
@@ -71,7 +73,7 @@ export class DebtsComponent implements OnInit {
   }
 
   openDeal(item) {
-    this.debtsService.obligations.isObligation = false;
+    // this.debtsService.obligations.isObligation = false;
     this.debtModal.open(item);
     this.debtModal.companyParams(item);
     this.debtsService.debtSelect = item;
@@ -108,13 +110,13 @@ export class DebtsComponent implements OnInit {
 
   verEstado(deuda: any, nitCompany: any, numberAccount: string, type: number) {
 
-    if (type == 2) {
-      this.debtsService.obligations.isObligation = true;
-      let withoutObfuscating = numberAccount.replace("******", "");
-      numberAccount = withoutObfuscating;
-    } else {
-      this.debtsService.obligations.isObligation = false;
-    }
+    // if (type == 2) {
+    //   this.debtsService.obligations.isObligation = true;
+    //   let withoutObfuscating = numberAccount.replace("******", "");
+    //   numberAccount = withoutObfuscating;
+    // } else {
+    //   this.debtsService.obligations.isObligation = false;
+    // }
     const data = {
       de: deuda,
       type: type,
@@ -139,32 +141,32 @@ export class DebtsComponent implements OnInit {
     });
   }
 
-  public getObligations() {
-    this.broker.findObligations().subscribe((response: any) => {
-      this.debtsService.obligations = response;
-      if (this.debtsService.obligations.status == "ERROR") {
-        //Validar si necesario mostrar error o otra pagina ahora existen 2 servicios cargando en el controlador
-        // this.router.navigate(['/error']);
-      } else {
-        this.debtsService.filteredObligations = Object.assign([], this.debtsService.obligations.data);
+  // public getObligations() {
+  //   this.broker.findObligations().subscribe((response: any) => {
+  //     this.debtsService.obligations = response;
+  //     if (this.debtsService.obligations.status == "ERROR") {
+  //       //Validar si necesario mostrar error o otra pagina ahora existen 2 servicios cargando en el controlador
+  //       // this.router.navigate(['/error']);
+  //     } else {
+  //       this.debtsService.filteredObligations = Object.assign([], this.debtsService.obligations.data);
 
-        if (this.debtsService.obligations.data.length > 0) {
-          for (let obl of this.debtsService.obligations.data) {
-            if (obl.accountStatus == "ACTIVA") {
-              this.activeObligation++;
-            }
-          this.debtsService.crearFiltros("obl");
-          }
-        }
-      }
-    },
-      (error) => {
-        $('#loading').modal('hide');
-        this.router.navigate(['/error']);
-        this.sesion.sesionCookie = null;
-      });
+  //       if (this.debtsService.obligations.data.length > 0) {
+  //         for (let obl of this.debtsService.obligations.data) {
+  //           if (obl.accountStatus == "ACTIVA") {
+  //             this.activeObligation++;
+  //           }
+  //         this.debtsService.crearFiltros("obl");
+  //         }
+  //       }
+  //     }
+  //   },
+  //     (error) => {
+  //       $('#loading').modal('hide');
+  //       this.router.navigate(['/error']);
+  //       this.sesion.sesionCookie = null;
+  //     });
 
-  }
+  // }
 
   public negotiateObligation(obligation: any) {
     
@@ -205,19 +207,27 @@ export class DebtsComponent implements OnInit {
     }
 
   }
-
+  
 
   obligaciones() {
+    var activedO = document.getElementById('btnObligations');
+    var activedR = document.getElementById('btnNegativeReports');
+    activedO.classList.add('activo');
+    activedR.classList.remove('activo');
     this.obligacionesNegociables = true;
     this.reportesNegociables = false;
     this.otrosReportes = false;
     if (this.debtsService.obligations.data.length  > 0) {
        this.debtsService.crearFiltros("obl");
-       }
+       }    
   }
 
 
   reportes() {
+    var activedR = document.getElementById('btnNegativeReports');
+    var activedO = document.getElementById('btnObligations');    
+    activedR.classList.add('activo');
+    activedO.classList.remove('activo');
     this.obligacionesNegociables = false;
     this.reportesNegociables = true;
     this.otrosReportes = false;

@@ -2,7 +2,9 @@
 
 .modal-program {
   .modal-dialog {
-    margin: 0;
+    @media(max-width:767px){
+      margin:0
+    }
     .modal-content {
     padding: 2% 6%;
     border-radius: 20px;
@@ -10,12 +12,13 @@
     @media (min-width: 768px) {
       background-image: url(/assets/images/all/Recurso_bg.svg);
       background-position: center right;
-      background-repeat: no-repeat;
+      background-repeat: no-repeat;      
     }
     @media(max-width:767px){
       border-radius: 0;
       border: 0;
       padding: 2% 7%;
+      height: 100vh;
     }
   }
   }
