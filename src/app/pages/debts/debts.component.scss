@@ -199,14 +199,24 @@
       }
     }
   }
+  
   .debts-all {
-    padding: 7% 4% 32px;
+    padding: 7% 0 32px;
     @media(min-width:1800px){
-      padding: 7% 12% 32px;
+      padding: 7% 0 32px;
     }
     @media(max-width:767px){
       padding: 74px 24px 32px;
     }
+    &.debts-all-p {
+      padding: 7% 4% 32px;
+      @media(min-width:1800px){
+        padding: 7% 12% 32px;
+      }
+      @media(max-width:767px){
+        padding: 74px 24px 32px;
+      }
+    }    
     .alert-debts {
       background-color: $bg-alert;
       padding: 8px 32px;
@@ -290,6 +300,15 @@
       }
     }
     .debt-container {
+      &.debts-all-full {
+        padding: 2% 13% 32px;
+        @media(min-width:1800px){
+          padding: 7% 12% 32px;
+        }
+        @media(max-width:767px){
+          padding: 74px 24px 32px;
+        }
+      }
       .no-debts-all {
         @media(max-width:767px){
           margin-top: 32px;
@@ -299,8 +318,10 @@
             width: 30%;
             display:inline-block;
             vertical-align: middle;
+            margin-right: 5%;
             @media(max-width:767px){
               width: 100%;
+              margin-right: initial;
             }
             img {
               width: 175px;
@@ -312,7 +333,7 @@
             }
           }
           .txt-no-debts {
-            width: 70%;
+            width: 65%;
             display:inline-block;
             vertical-align: middle;
             @media(max-width:767px){
@@ -348,7 +369,7 @@
           width: 60px;
           height: 2px;
           background-color: $check;
-          margin: 32px 0;
+          margin: 24px 0;
           @media(max-width:767px){
             margin: 16px 0;
           }

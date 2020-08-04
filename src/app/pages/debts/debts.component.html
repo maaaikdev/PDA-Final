@@ -1,7 +1,7 @@
 <section class="debt-main">
 	<div class="container-fluid">
 		<div class="row" >			
-			<div class="col-12 col-md-3 col-xxl-2 nav-main order-1 order-md-0">				
+			<div class="col-12 col-md-3 col-xxl-2 nav-main order-1 order-md-0" *ngIf="navLeft">				
 				<!-- <app-dfilters></app-dfilters> -->
 				<img src="assets/images/all/Logo_PAD_w.svg"  alt="Logo Datacrédito Ponte al Día" class="logo-main"/>
 				<div class="no-debts" *ngIf="noDebtsFreemium">
@@ -34,9 +34,9 @@
 					</button>
 				</div>
 			</div>
-			<div class="col-12 col-md-9 col-xxl-10 debts-all order-0 order-md-1">
+			<div class="debts-all order-0 order-md-1" [ngClass]="navLeft == false ? 'col-12 col-md-6 offset-md-3' : 'col-12 col-md-9 debts-all-p'">
 				<!-- No tienes deudas -->
-				<div class="debt-container" *ngIf="alertNoDebts">
+				<div class="debt-container" *ngIf="alertNoDebts" [ngClass]="navLeft == false ? '' : 'debts-all-full'">
 					<div class="no-debts-all">
 						<div class="alert-no-debts">
 							<div class="img-no-debts">
@@ -47,10 +47,14 @@
 								<h3>No tienes deudas por negociar con nuestras entidades aliadas.</h3>
 							</div>
 						</div>
-						<h3>Con base en tu perfil de crédito, tenemos esta oferta de crédito recomendada para ti.</h3>
+						<h3>Conocer tu historia de crédito puede ayudar a mejorar tu vida financiera. </h3>
 						<div class="line-green"></div>
-						<p>Las siguientes ofertas son de compañias externas a Midatacrédito y están basadas en tu puntaje de crédito. Estas pueden cambiar más adelante, cuando tu puntaje mejore.</p>
-						<div class="box-buscacredito">
+						<p>Te ayudamos a llevar a otro nivel tu perfil crediticio. Conoce tu historia de crédito Gratis</p>
+						<button class="btn-pda btn-orange w-40-btn h-lg-btn" id="goMidatacredito">
+							<span>Ir a Midatacrédito</span>
+							<i class="fa fa-chevron-right" aria-hidden="true"></i>
+						</button>
+						<!-- <div class="box-buscacredito">
 							<div class="row">
 								<div class="col-4 col-md-2 align-self-center order-1 order-md-0">
 									<img src="assets/images/all/Lineru.svg" alt="Lineru" />
@@ -84,7 +88,7 @@
 								</div>
 								
 							</div>
-						</div>
+						</div> -->
 					</div>					
 				</div>
 				<!-- No tienes deudas -->
@@ -363,18 +367,6 @@
 						</button>
 					</div>
 				</div>
-				<!-- <div class="row">
-					<div class="col-9 col-md-5 mx-auto">
-						<img src="assets/images/all/go_freemium.svg" class="icon" alt="Historia de Crédito">
-					</div>
-					<div class="col-10 col-md-7">
-						<h3>Conocer tu historia de crédito puede ayudar a mejorar tu vida financiera.</h3>
-						<p>Si quieres saber más sobre estas obligaciones financieras, ingresa a
-							<strong>Midatacrédito.</strong></p>
-						<a href="https://www.midatacredito.com" target="_blank" class="btn btn-outline ">Ir a
-							MidataCrédito <i class="arrow right"></i></a>
-					</div>
-				</div> -->
 			</div>
 		</div>
 	</div>
