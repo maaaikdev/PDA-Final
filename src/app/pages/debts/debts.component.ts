@@ -29,14 +29,14 @@ export class DebtsComponent implements OnInit {
 
   // DEBTS
   // No Debts
-  navLeft = false;
+  navLeft = true;
   noDebtsFreemium = false;
-  alertNoDebts = true;
+  alertNoDebts = false;
   // No Debts
   debtsToday = true;  
-  alertDebts = false;
+  alertDebts = true;
   obligacionesNegociables = false;
-  reportesNegociables = false;
+  reportesNegociables = true;
   otrosReportes = false;
   goFreemium = false;  
 

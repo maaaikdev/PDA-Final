@@ -35,7 +35,7 @@ export class SignService {
   acceptCheckService2() {
     if(this.check2 == 1) {
       this.check2 = 0;
-    } else if(this.check != 1) {
+    } else if(this.check2 != 1) {
       this.check2 = 1;
     }
   }

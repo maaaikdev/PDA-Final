@@ -24,12 +24,21 @@
 					Previsualización de firma
 				</div>
 				<div class="description">
-					<input *ngIf="sign.check == 1" checked type="checkbox" (click)='acceptCheck()' id="acepto" name="acepto" />
-					<input *ngIf="sign.check != 1" type="checkbox" (click)='acceptCheck()' id="acepto" name="acepto" /> Estoy de acuerdo con la <a (click)='openSignature()'>Regulación de Firma Electrónica (ABRIR)</a>
+					<div class="checkInput">
+						<input *ngIf="sign.check == 1" checked type="checkbox" (click)='acceptCheck()' id="acepto" name="acepto" />
+						<input *ngIf="sign.check != 1" type="checkbox" (click)='acceptCheck()' id="acepto" name="acepto" /> 
+						Estoy de acuerdo con la 
+						<a (click)='openSignature()'>Regulación de Firma Electrónica (ABRIR)</a>
+					</div>
+					<div class="checkInput">
+						<input *ngIf="sign.check2 == 1" checked type="checkbox" (click)='acceptCheck2()' id="acepto2" name="acepto2" />
+						<input *ngIf="sign.check2 != 1" type="checkbox" (click)='acceptCheck2()' id="acepto2" name="acepto2" /> 
+						Declaro que los recursos utilizados para el pago de mis obligaciones provienen de actividades lícitas, de conformidad con la normatividad Colombiana, así mismo, manifiesto que no admitiré que terceros efectúen depósitos a mis cuentas, o  paguen mis obligaciones o hagan abonos a las mismas con dineros cuya procedencia sea desconocida
+					</div>			
 				</div>
 				<div class="finish">
-					<button *ngIf="sign.check == 1" (click)='confirmOffer(select.offer)'>Terminar <i class="fa fa-angle-right" aria-hidden="true"></i></button>
-					<button *ngIf="sign.check != 1" disabled (click)='confirmOffer(select.offer)'>Terminar <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+					<button *ngIf="(sign.check == 1) && (sign.check2 == 1)" (click)='confirmOffer(select.offer)'>Terminar<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+					<button *ngIf="(sign.check != 1) || (sign.check2 != 1)" disabled (click)='confirmOffer(select.offer)'>Terminar<i class="fa fa-angle-right" aria-hidden="true"></i></button>
 				</div>
 			</div>
 			<div class="col-12 col-md-4 order-1 order-md-2">
