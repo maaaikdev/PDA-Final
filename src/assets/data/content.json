@@ -48,8 +48,8 @@
 			},
 			"links":{
 				"url1":"¿Qué es mi Ponte al día?",
-				"url2":"https://www.midatacredito.com/#!/privacidadsitio",
-				"url3":"https://www.midatacredito.com/#!/terminoscondiciones",
+				"url2":"https://www.midatacredito.com/politicasdeprivacidad",
+				"url3":"https://www.midatacredito.com/terminoscondiciones",
 				"url4":"https://contenido.midatacredito.com/recursos/archivos/clausula_poliza_premium.pdf"
 			}
 		},
@@ -62,8 +62,8 @@
 				"txt4":"Canales gratuitos de consulta"
 			},
 			"links":{
-				"url1":"http://preguntas.midatacredito.com/",
-				"url2":"https://www.midatacredito.com/jsp/contacto/MiDCContactenos.jsp",
+				"url1":"/faq",
+				"url2":"https://www.midatacredito.com/contactanos",
 				"url3":"http://www.sic.gov.co/",
 				"url4":"https://www.datacredito.com.co/"
 			}
@@ -72,12 +72,12 @@
 			"titulo": "Otras soluciones",
 			"textos":{
 				"txt1":"Historial de crédito",
-				"txt2":"Buscacrédito",
+				"txt2":"Midactacrédito Verifica",
 				"txt3":"",
 				"txt4":""
 			},
 			"links":{
-				"url1":"",
+				"url1":"https://www.midatacredito.com/",
 				"url2":"",
 				"url3":"",
 				"url4":""

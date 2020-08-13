@@ -12,6 +12,7 @@ export const environment = {
   
   // APIEndpoint_authn: 'https://demo-sso-ui-okta.a.apps.experian.com/authn-ws',
   APIEndpoint_authn: 'https://pontealdia.midatacredito.com/authn-ws',
+  // APIEndpoint_authn: 'https://crtestapi.azurewebsites.net/',
   APIEndpoint_company: 'https://pontealdia.midatacredito.com/cmpnymnger-ws',
   APIEndpoint_debts: 'https://pontealdia.midatacredito.com/debtsmanager-ws',
   APIEndpoint_ngttion: 'https://pontealdia.midatacredito.com/ngttion-ws',

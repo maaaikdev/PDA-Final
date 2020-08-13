@@ -36,16 +36,16 @@
 				</div>
 			</div>
 			<div class="agree-wrap" *ngIf="!obligation">
-				<div class="agree-item mr-4 pt-4" *ngFor="let option of agree.agreements">
+				<div class="agree-item mr-4 pt-3" *ngFor="let option of agree.agreements">
 					<div class="head">
-						<div class="price main">
-							<span>Pagas</span> $ {{option.payment | currency:'COP':'':'1.2-2'}}
+						<div class="price main d-flex">
+							<span class="mr-auto">Pagas</span> $ {{option.payment | currency:'COP':'':'1.2-2'}}
 						</div>
-						<div class="price">
-							<span>Antes </span> <s>$ {{option.paymentBefore | currency:'COP':'':'1.2-2'}}</s>
+						<div class="price d-flex">
+							<span class="mr-auto">Antes </span> <s>$ {{option.paymentBefore | currency:'COP':'':'1.2-2'}}</s>
 						</div>
-						<div class="price" *ngIf="option.saving > 0">
-							<span>Ahorro</span> $ {{option.saving | currency:'COP':'':'1.2-2'}}
+						<div class="price d-flex" *ngIf="option.saving > 0">
+							<span class="mr-auto">Ahorro</span> $ {{option.saving | currency:'COP':'':'1.2-2'}}
 						</div>
 					</div>
 					<div class="info">
@@ -142,16 +142,16 @@
 			</div>
 
 			<div class="agree-wrap" *ngIf="obligation">
-				<div class="agree-item mr-4 pt-4" *ngFor="let option of listOffers">
+				<div class="agree-item mr-4 pt-3" *ngFor="let option of listOffers">
 					<div class="head">
-						<div class="price main">
-							<span>Pagas</span> $ {{option.newBalance | currency:'COP':'':'1.2-2'}}
+						<div class="price main d-flex">
+							<span class="mr-auto">Pagas</span> $ {{option.newBalance | currency:'COP':'':'1.2-2'}}
 						</div>
 						<div class="price">
-							<span>Antes </span> <s>$ {{debtService.balanceObligation | currency:'COP':'':'1.2-2'}}</s>
+							<span class="mr-auto">Antes </span> $ {{debtService.balanceObligation | currency:'COP':'':'1.2-2'}}
 						</div>
 						<div class="price" *ngIf="debtService.balanceObligation > 0">
-							<span>Ahorro</span> $ {{debtService.balanceObligation - option.newBalance  | currency:'COP':'':'1.2-2'}}
+							<span class="mr-auto">Ahorro</span> $ {{debtService.balanceObligation - option.newBalance  | currency:'COP':'':'1.2-2'}}
 						</div>
 					</div>
 					<div class="info">

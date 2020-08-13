@@ -203,6 +203,7 @@
             width: 90%;
             position: relative;
             margin: 33px auto 24px;
+            padding: 24px 8px;
             @media(max-width:767px){
                 width: 100%;
                 border: 2px solid $main-color;
@@ -227,7 +228,7 @@
                 font-family: $roboto;
                 font-weight: $regular;
                 color: $txt-gray;
-    
+                padding: 8px 24px;
                 span {
                     text-align: center;
                     font-size: 28px;
@@ -235,7 +236,6 @@
                     font-family: $din;
                     font-weight: $light;
                     color: $black;
-                    padding: 25px 0 16px;
                     display: inline-block;
                     @media(max-width: 767px){
                         font-size: 22px;
@@ -250,11 +250,10 @@
                 font-family: $roboto;
                 font-weight: $regular;
                 color: $mid-gray;
-    
+                padding: 8px 24px;
                 span {
                     text-decoration: line-through;
                     font-size: 20px;
-                    margin: 0 0 16px;
                     display: inline-block;
                     @media(max-width: 767px){
                         font-size: 16px;
@@ -270,35 +269,26 @@
                 border-top: 1px solid #F2F2F2;
                 margin-top: 10px;
                 color: $txt-gray;
-                padding: 24px 0 16px;
-    
+                padding: 8px 24px;
+                @media(max-width: 767px){
+                    padding: 8px;
+                }
                 .linePay {
                     margin: 7px 0;
                     width: 100%;
                     height: 17px;
     
                     .left {
-                        width: 50%;
-                        float: left;
                         font-size: 13px;
                         line-height: 17px;
                         font-family: $roboto;
                         font-weight: $regular;
-                        padding-left: 29px;
-                        @media(max-width:767px){
-                            padding-left: 16px;
-                        }
                         span {
                             color: $light-gray;
                         }
                     }
         
                     .right {
-                        text-align: right;
-                        padding-right: 29px;
-                        @media(max-width:767px){
-                            padding-right: 16px;
-                        }
                     }
                 }
                 .btn-l {

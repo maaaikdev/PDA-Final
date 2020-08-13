@@ -46,30 +46,40 @@
 					<div class="check">
 						<i class="fa fa-check-circle"></i>
 					</div>
-					<div class="itemPrice">Pagas <span *ngIf="!agree.agreements.isObligation">$ {{select.offer.payment | currency:'COP':'':'1.2-2'}}</span>
-						 <span *ngIf="agree.agreements.isObligation">$ {{select.offer.newBalance | currency:'COP':'':'1.2-2'}}</span></div>
-					<div class="itemBefore">Antes <span *ngIf="agree.agreements.isObligation">$ {{debtService.balanceObligation | currency:'COP':'':'1.2-2'}}</span><span *ngIf="!agree.agreements.isObligation">$ {{select.offer.paymentBefore | currency:'COP':'':'1.2-2'}}</span></div>
-					<div class="itemBefore">Ahorro <span class="sinTachado" *ngIf="!agree.agreements.isObligation">$ {{select.offer.saving | currency:'COP':'':'1.2-2'}}</span>
-						<span class="sinTachado" *ngIf="agree.agreements.isObligation">$ {{debtService.balanceObligation - select.offer.newBalance  | currency:'COP':'':'1.2-2'}}</span></div>
+					<div class="itemPrice d-flex">
+						<div class="mr-auto">Pagas </div> 
+						<span *ngIf="!agree.agreements.isObligation">$ {{select.offer.payment | currency:'COP':'':'1.2-2'}}</span>
+						<span *ngIf="agree.agreements.isObligation">$ {{select.offer.newBalance | currency:'COP':'':'1.2-2'}}</span>
+					</div>
+					<div class="itemBefore d-flex">
+						<div class="mr-auto">Antes</div>
+						<span *ngIf="agree.agreements.isObligation">$ {{debtService.balanceObligation | currency:'COP':'':'1.2-2'}}</span>
+						<span *ngIf="!agree.agreements.isObligation">$ {{select.offer.paymentBefore | currency:'COP':'':'1.2-2'}}</span>
+					</div>
+					<div class="itemBefore d-flex">
+						<div class="mr-auto">Ahorro</div>
+						<span class="sinTachado" *ngIf="!agree.agreements.isObligation">$ {{select.offer.saving | currency:'COP':'':'1.2-2'}}</span>
+						<span class="sinTachado" *ngIf="agree.agreements.isObligation">$ {{debtService.balanceObligation - select.offer.newBalance  | currency:'COP':'':'1.2-2'}}</span>
+					</div>
 					<div class="dataPays">
-						<div class="linePay" *ngIf="select.offer.paymentInitial > 0">
-							<div class="left">Pago inicial</div>
-							<div class="left right">$ {{select.offer.paymentInitial | currency:'COP':'':'1.2-2'}}</div>
+						<div class="linePay d-flex" *ngIf="select.offer.paymentInitial > 0">
+							<div class="left mr-auto">Pago inicial</div>
+							<div class="left">$ {{select.offer.paymentInitial | currency:'COP':'':'1.2-2'}}</div>
 						</div>
-						<div class="linePay">
-							<div class="left">Pago mensual</div>
-							<div class="left right"  *ngIf="!agree.agreements.isObligation">$ {{select.offer.paymentMonthly | currency:'COP':'':'1.2-2'}} <span *ngIf="select.offer.paymentInitial > 0">x{{select.offer.totalPayments - 1}}</span><span *ngIf="select.offer.paymentInitial == 0">x{{select.offer.totalPayments}}</span></div>
-							<div class="left right"  *ngIf="agree.agreements.isObligation">$ {{select.offer.paymentMonthly | currency:'COP':'':'1.2-2'}} </div>
+						<div class="linePay d-flex">
+							<div class="left mr-auto">Pago mensual</div>
+							<div class="left"  *ngIf="!agree.agreements.isObligation">$ {{select.offer.paymentMonthly | currency:'COP':'':'1.2-2'}} <span *ngIf="select.offer.paymentInitial > 0">x{{select.offer.totalPayments - 1}}</span><span *ngIf="select.offer.paymentInitial == 0">x{{select.offer.totalPayments}}</span></div>
+							<div class="left"  *ngIf="agree.agreements.isObligation">$ {{select.offer.paymentMonthly | currency:'COP':'':'1.2-2'}} </div>
 						</div>
-						<div class="linePay">
-							<div class="left">Total pagos</div>
-							<div class="left right" *ngIf="agree.agreements.isObligation">{{select.offer.agreement.totalPayments}}</div>
-							<div class="left right" *ngIf="!agree.agreements.isObligation">{{select.offer.totalPayments}}</div>
+						<div class="linePay d-flex">
+							<div class="left mr-auto">Total pagos</div>
+							<div class="left" *ngIf="agree.agreements.isObligation">{{select.offer.agreement.totalPayments}}</div>
+							<div class="left" *ngIf="!agree.agreements.isObligation">{{select.offer.totalPayments}}</div>
 						</div>
-						<div class="linePay">
-							<div class="left">Inicio de pago</div>
-							<div class="left right" *ngIf="!agree.agreements.isObligation">{{select.offer.paymentDate | date: 'dd MMMM yyyy'}}</div>
-							<div class="left right" *ngIf="agree.agreements.isObligation">{{select.offer.agreement.date | date: 'dd MMMM yyyy'}}</div>
+						<div class="linePay d-flex">
+							<div class="left mr-auto">Inicio de pago</div>
+							<div class="left" *ngIf="!agree.agreements.isObligation">{{select.offer.paymentDate | date: 'dd MMMM yyyy'}}</div>
+							<div class="left" *ngIf="agree.agreements.isObligation">{{select.offer.agreement.date | date: 'dd MMMM yyyy'}}</div>
 						</div>
 						<button class="btn-l btn-link" id="SeeProgram" (click)="open(select.offer.agreement.paymentAgreements)">
 							<i class="fa fa-calculator" aria-hidden="true"></i>

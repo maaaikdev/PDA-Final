@@ -188,16 +188,15 @@
       overflow: inherit;
       width: 32%;
     }
-    .head {
-      margin-top: 20px;
+    .head {      
       text-align: center;
       border-bottom: 1px solid $txt-gray;
-      padding-bottom: 20px;
       line-height: 25px;
+      padding: 24px 32px;
       @media(max-width:767px){
         border-bottom: 1px solid #ddd;
         margin: 0 18px 0;
-        padding-bottom: 16px;
+        padding: 24px 8px 16px;
       }
       .price {
         font-size: 20px;
@@ -287,7 +286,7 @@
         margin: 0 auto 0;
       }
       &:hover {
-        background-color: $secondary-color;
+        background-color: $terciary-color;
         color: $white;
       }
       &.btn-pink{
