@@ -15,22 +15,33 @@
         border-radius: 20px;
         padding: 0;
         height: auto;
-        max-height: 599px;
-        background-image: url(/assets/images/backgrounds/fondo_purple.svg);
-        background-position: center right;
-        background-repeat: no-repeat;
-        height: 479px;
+        overflow: hidden;
+        // max-height: 599px;
+        // background-image: url(/assets/images/backgrounds/fondo_purple.svg);
+        // background-position: center right;
+        // background-repeat: no-repeat;
+        // height: 479px;
         @media(max-width:767px){
             background-image: none;
             max-height: 100%;
             height: 100vh;
             border-radius: 0;
         }
+        .bg-ok {
+            position: absolute;
+            width: 37%;
+            right: -1px;
+            z-index: 0;
+            @media(max-width:767px){
+                display: none;
+            }
+        }       
 
         .cerrar {
             position: absolute;
             color: $white;
-            font-size: 40px;
+            font-size: 32px;
+            font-weight: 100;
             right: 21px;
             cursor: pointer;
             line-height: 24px;
@@ -41,7 +52,6 @@
         .principal {
             font: $regular 18px/24px $roboto;
             color: $txt-gray;
-            padding-top: 57px;
             margin-left: 14px;
             @media(max-width:767px){
                 padding-top: 30px;
@@ -59,10 +69,14 @@
             font: $light 28px/35px $din;
             letter-spacing: 0;
             color: $main-color;
-            margin: 29px 76px 73px;
+            margin: 29px 76px 32px;
             @media(max-width:767px){
                 margin: 19px 0px 22px;
                 font: 300 23px/30px din-2014, sans-serif;
+            }
+            &.green {
+                color: $check;
+                font-weight: 500;
             }
         }
 
@@ -82,6 +96,9 @@
             @media(max-width:767px){
                 width: 100%;
             }
+            &.orange{
+                background: $terciary-color 0% 0% no-repeat padding-box;
+            }
             i {
                 position: absolute;
                 right: 30px;
@@ -91,13 +108,13 @@
         }
 
         .imgConfirm {
-            margin-top: 79px;
+            padding: 40px 0;
             @media(max-width:767px){
                 margin-top: 0;
                 width: 54%;
                 margin: 0 auto;
                 display: block;
-                padding-top: 10px;
+                padding: 0;
             }
         }
     }
