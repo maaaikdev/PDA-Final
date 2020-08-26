@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## GENERATE DIST FILES
-ng build --configuration=develop --output-path=dist/ac-cthupon-ui/develop --output-hashing=all
-ng build --configuration=qa --output-path=dist/ac-cthupon-ui/qa --output-hashing=all 
-ng build --configuration=demo --output-path=dist/ac-cthupon-ui/demo --output-hashing=all
-ng build --configuration=production --output-path=dist/ac-cthupon-ui/production --output-hashing=all
+ng build --configuration=develop --output-path=dist/ac-cthupon-ui/develop --outputHashing=all
+ng build --configuration=qa --output-path=dist/ac-cthupon-ui/qa --outputHashing=all 
+ng build --configuration=demo --output-path=dist/ac-cthupon-ui/demo --outputHashing=all
+ng build --configuration=production --output-path=dist/ac-cthupon-ui/production --outputHashing=all

@@ -8,6 +8,11 @@ export const environment = {
   APIEndpoint_company: 'https://ui-cthupon-dev-co-sla-datacash.apps.appcanvas.net/cmpnymnger-ws',
   APIEndpoint_debts: 'https://ui-cthupon-dev-co-sla-datacash.apps.appcanvas.net/debtsmanager-ws',
   APIEndpoint_ngttion: 'https://ui-cthupon-dev-co-sla-datacash.apps.appcanvas.net/ngttion-ws',
+
+  urlEndPoints: 'https://ui-cthupon-dev-co-sla-datacash.apps.internal.appcanvas.net',
+  sessioninfo: '/ldnfosession/sessioninfo/ecs',
+  addCustomerLog: '/nwuser-ws/termsConditions/addCustomerLog',
+
   consultaDeudas:    '/midatacredito/pontealdia/v1/debt',
   negociarDeudas: '/EngineNegotiation/getOffers',
   descargarPDF: '/companymanager/paymentAgreement',

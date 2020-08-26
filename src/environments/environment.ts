@@ -16,6 +16,12 @@ export const environment = {
   APIEndpoint_company: 'https://pontealdia.midatacredito.com/cmpnymnger-ws',
   APIEndpoint_debts: 'https://pontealdia.midatacredito.com/debtsmanager-ws',
   APIEndpoint_ngttion: 'https://pontealdia.midatacredito.com/ngttion-ws',
+
+
+  // urlEndPoints: 'https://ui-cthupon-dev-co-sla-datacash.apps.internal.appcanvas.net',
+  urlEndPoints: 'https://ui-cthupon-dev-co-sla-datacash.apps.internal.appcanvas.net',
+  sessioninfo: '/ldnfosession/sessioninfo/ecs',
+  addCustomerLog: '/nwuser-ws/termsConditions/addCustomerLog',  
   
   negociarObligaciones: '/midatacredito/pontealdia/v1/obligation/offer',
   // consultarObligaciones: '/midatacredito/pontealdia/v1/obligation/list',
@@ -26,6 +32,7 @@ export const environment = {
   descargarPDF: '/companymanager/paymentAgreement',
   guardarPropuesta: '/midatacredito/pontealdia/v1/agreement',
   pagarLinea: '/midatacredito/pontealdia/v1/audit/pay',
+
   
   urlLogin: 'https://okta-ui-dev-co-sla-datacash.apps.internal.appcanvas.net/login?product=pntd',
   urlRegister: 'https://okta-ui-dev-co-sla-datacash.apps.internal.appcanvas.net/registro?product=pntd',

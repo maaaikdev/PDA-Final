@@ -373,3 +373,49 @@
 </section>
 <app-dfilters></app-dfilters>
 <app-deal></app-deal>
+
+<!-- Modal T&C -->
+<section class="experian">
+	<div class="modal fade hide" id="terminosModal" tabindex="-1" role="dialog" aria-labelledby="terminosModalLabel" aria-hidden="true">
+		<div class="modal-dialog tym modal-dialog-centered" role="document">
+			<div class="modal-content tym">
+				<div class="modal-header tym">
+				<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button> -->
+				</div>
+				<div class="modal-body tym">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-md-6 order-0 order-md-0 mb-3 middle">
+								<img src="../../../assets/images/all/TyT.svg" class="img-cosult">
+							</div>
+							<div class="col-12 col-md-6 order-1 order-md-1">
+								<h2 class="mb-4">Hemos actualizado nuestros términos y condiciones:</h2>
+								<!-- <h3 class="mb-4">Evita desplazamientos innecesarios. Consulta totalmente <span class="bold">GRATIS</span> el estado de tu historia de crédito desde la comodidad de tu casa</h3> -->
+								<p class="tym">Estamos mejorando tu experiencia, por ello solicitamos que aceptes nuevamente nuestros <a href=""><span>Términos y Condiciones.</span></a> De no hacerlo, no podrás disfrutar de nuestros beneficios.</p>
+								<a rel="noopenner nofollow" class="btn-pda btn-pink w-100-btn" id="acceptTyC" data-dismiss="modal" aria-label="Close" (click)="saveTerms()">
+									<span>Acepto</span>
+									<i class="fa fa-chevron-right" aria-hidden="true"></i>
+								</a>
+								<a rel="noopenner nofollow" class="btn-pda btn-outline-pink w-100-btn mt-3" id="acceptTyC" data-dismiss="modal" aria-label="Close" (click)="cerrarSesion()">
+									<span>No Acepto</span>
+									<i class="fa fa-chevron-right" aria-hidden="true"></i>
+								</a>
+								<!-- <div class="btn-next my-4">
+									<a rel="noopenner nofollow" class="btn btn-primary" style="cursor: pointer;" data-dismiss="modal" aria-label="Close" (click)="logTerminos()">Acepto</a>
+									<span class="arrow-right"><img src="../../../assets/img/images/arrow-right-white.svg" class="txt-experian-purple"></span>
+								</div>
+								<div class="btn-next my-4">
+									<a rel="noopenner nofollow" class="btn btn-outline" style="cursor: pointer;" data-dismiss="modal" aria-label="Close" (click)="closeSession()">No acepto</a>
+									<span class="arrow-right"><img src="../../../assets/img/images/arrow-right.svg" class="txt-experian-purple"></span>
+								</div> -->
+							</div>                            
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Modal T&C -->

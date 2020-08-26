@@ -16,6 +16,7 @@ export class BrokerService {
   dataLinea: any;
   nameCompanyAccept: any;
   account: any;
+  cookie:any
 
   constructor(public http: HttpClient, private cookieService: CookieService) { }
 
@@ -73,5 +74,28 @@ export class BrokerService {
   
   pagarLinea(body) {
     return this.http.post(environment.APIEndpoint_debts + environment.pagarLinea, body, { headers });
+  }
+
+  // Informacion adicional
+  datosUsuario( cookie: string ) {
+    const body = JSON.stringify([
+      {
+        product: 'MIDATACREDITO',
+        params: [
+          {
+            name: 'IN_SESSION',
+            value: cookie
+          }
+        ]
+      }
+    ]);
+
+    return this.http.post(environment.urlEndPoints + environment.sessioninfo, body, { headers} );
+  }
+  guardarTerminos(body){
+    const headers: any = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    return this.http.post(environment.urlEndPoints + environment.addCustomerLog, body, {headers});
   }
 }

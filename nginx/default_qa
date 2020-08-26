@@ -48,6 +48,14 @@ server {
         proxy_pass http://ac-ngttion-ws.qa-co-sla-datacash.svc.cluster.local:8080/;
 		proxy_read_timeout 180;
 	}
+	location /ldnfosession/ {
+		proxy_pass https://ws-ldnfosession-qa-co-sla-datacash.apps.internal.appcanvas.net/;
+		proxy_read_timeout 180;
+	}
+	location /nwuser-ws/ {
+        proxy_pass https://ws-nwuser-qa-co-sla-datacash.apps.internal.appcanvas.net/;
+		proxy_read_timeout 180;
+    }
 		
 	error_page   500 502 503 504  /50x.html;
 

@@ -8,6 +8,11 @@ export const environment = {
   APIEndpoint_company: 'https://pontealdia.midatacredito.com/cmpnymnger-ws',
   APIEndpoint_debts: 'https://pontealdia.midatacredito.com/debtsmanager-ws',
   APIEndpoint_ngttion: 'https://pontealdia.midatacredito.com/ngttion-ws',
+
+  urlEndPoints: 'https://pontealdia.midatacredito.com/',
+  sessioninfo: '/ldnfosession/sessioninfo/ecs',
+  addCustomerLog: '/nwuser-ws/termsConditions/addCustomerLog',
+
   consultaDeudas:    '/midatacredito/pontealdia/v1/debt',
   negociarDeudas: '/EngineNegotiation/getOffers',
   descargarPDF: '/companymanager/paymentAgreement',

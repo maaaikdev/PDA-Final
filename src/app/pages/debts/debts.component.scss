@@ -847,4 +847,186 @@
   }
 }
   
+/* ========================= POP UP T&C =========================== */
+* {
+  -webkit-font-smoothing: antialiased;
+}
+@media (max-width: 767px) {
+  .modal-open .modal {
+      padding-left: 0!important;
+  }
+}
+.experian .modal-body.tym {
+  padding: 2rem 4rem 4rem!important;
+}
+@media (max-width: 767px) {
+  .experian .modal-body.tym {
+      padding: 1rem 1rem!important;
+  }
+}
 
+.experian .modal-body.tym h2 {
+  color:#614CD4!important;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+@media (max-width: 767px) {
+  .experian .modal-body.tym h2 {
+      font-size: 22px;        
+      text-align: center;
+  }
+}
+.experian .modal-body.tym h3 {
+  color:#424448;
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  .experian .modal-body.tym h3 {
+      font-size: 18px;
+  }
+}
+.experian .modal-body.tym h3 span {
+  color:#614CD4;
+}
+.experian .modal-body.tym p.tym {
+  color:#54565A;
+  font-size: 14px!important;
+  font-weight: 300;
+}
+@media (max-width: 767px){
+  .experian .modal-body.tym p {
+      text-align: center;
+  }
+}
+.experian .modal-body.tym p span {
+  color:#6338A1;
+}
+.experian .modal-body.tym p a span {
+  text-decoration: underline!important;
+  font-weight: 600;
+}
+.experian .modal-dialog.tym {
+  max-width: 785px!important;
+}
+.experian .modal-content.tym {
+  border-radius: 26px;
+  background: #fff url(../../../assets/images/all/bkground2.svg) no-repeat 100% 100%;
+  background-size: cover;
+}
+@media (max-width: 767px) {
+  .experian .modal-content.tym {
+      border-radius: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .experian .modal-body.tym .btn-next {
+      width: 100%;
+  }
+}
+.experian .modal-header.tym {
+  border-bottom: none;
+}
+.experian .modal-body.tym .btn-next {
+  width: 75%;
+}
+@media (max-width: 767px) {
+  .experian .modal-body.tym .btn-next {
+      width: 100%;
+  }
+}
+.experian .close {
+  font-size: 3.5rem;
+  font-weight: 100;
+  color: #000;
+  line-height: 0.3;
+  opacity: 1;
+  padding-right: 25px!important;
+  padding-top: 25px!important;
+}
+.experian .middle {
+  display: flex;
+  // justify-content: center;
+}
+.experian .img-cosult {
+  width: 85%;
+}
+@media (max-width:767px) {
+  .experian .img-cosult {
+      width: 45%;
+      margin: 0 auto;
+      display: block;
+      margin-top: -20px;
+  }
+}
+
+/* BUTTON */
+a {
+  color: initial;
+}
+.experian .btn {
+  width: 100%;
+  min-height: 46px;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex!important;
+  align-items: center;
+  border: none;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: none!important;
+}
+/* PRIMARY BUTTON */
+.experian .btn-primary {
+  background-color: #632678!important;
+  color: #fff!important;
+}
+.experian .btn-primary:hover {
+  background-color: #462253!important;
+  color: #fff!important;
+}
+.experian .btn-next {
+  position: relative;
+}
+.experian .arrow-right {
+  position: absolute;
+  top: 27%;
+  right: 20px;
+}
+/* PRIMARY BUTTON */
+
+/* PRIMARY OUTLINE */
+.experian .btn-outline {
+  border: 1px solid #632678!important;
+  color: #632678!important;
+}
+.experian .btn-outline:hover {
+  border: 1px solid #632678!important;
+  background-color: rgba(99, 38, 120, 0.2)!important;
+  color: #632678!important;
+}
+.experian .btn-next {
+  position: relative;
+}
+.experian .arrow-right {
+  position: absolute;
+  top: 30%;
+  right: 20px;
+}
+/* PRIMARY OUTLINE */
+.experian .btn-next {
+  position: relative;
+}
+.experian .modal-body.tym .btn-next {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .experian .modal-body.tym .btn-next {
+      width: 100%;
+  }
+}
+.experian .modal-header.tym button.close span{
+  color:#000
+}
+/* ========================= POP UP T&C =========================== */
+  

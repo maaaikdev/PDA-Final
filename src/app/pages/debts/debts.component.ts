@@ -38,7 +38,11 @@ export class DebtsComponent implements OnInit {
   obligacionesNegociables = false;
   reportesNegociables = true;
   otrosReportes = false;
-  goFreemium = false;  
+  goFreemium = false;
+
+  //ECS
+  dataUser: any;
+  terms: any;
 
   constructor(
     public debtModal: DealService,
@@ -64,13 +68,62 @@ export class DebtsComponent implements OnInit {
       }
     });
     // this.getObligations();
-    this.consultarDeudas();   
-
+    this.consultarDeudas();
+    this.datos_usuario()    
   }
 
   ngOnInit() {
     this.select.state = null;
     this.debtsService.debtSelect = null;
+  }
+
+  datos_usuario() {
+    this.broker.datosUsuario( this.sesion.sesionCookie).subscribe( (data: any) => {
+      this.dataUser = data;
+      this.terms = this.dataUser[0].params[8].value;
+      if(this.terms === true) {
+        $('#terminosModal').modal('show')
+      } else {
+        $('#terminosModal').modal('hide')
+      }
+
+    });   
+  }
+
+  saveTerms(){
+    const data2 = {
+      session: this.sesion.sesionCookie,
+      termCondition: 4
+    };
+
+    this.broker.guardarTerminos(data2).subscribe( (resultado: any) => {
+      //console.log("respondió 200");
+    },error => {
+      //console.log("Este es el error", error);
+    })
+
+  }
+
+  cerrarSesion() {
+    // this.cookieService.set('IDSESSIONMDC', this.sesion.sesionCookie, 0);
+    const body = {
+      clientId: environment.clientId,
+      idSession: this.sesion.sesionCookie,
+      country: environment.country
+    };
+    this.sesion.cookieService.delete('IDSESSIONMDC', this.sesion.sesionCookie, environment.domain);
+    this.broker.cerrar_sesion(body).subscribe((response: any) => {
+      // console.log('response', response);
+      window.localStorage.clear();
+    }, error =>{
+      // console.log('error cerrar sesion', error);
+    });
+    setTimeout(() => {
+      this.sesion.cookieService.delete('IDSESSIONMDC', this.sesion.sesionCookie, environment.domain);
+      this.sesion.sesionCookie = null;
+      this.router.navigate(['/']);
+      // this.router.navigate(['/'], { queryParams: { page: 'out' } });
+    }, 500);
   }
 
   openDeal(item) {

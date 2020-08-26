@@ -51,6 +51,14 @@ server {
         proxy_pass http://ac-ngttion-ws.demo-sla-datacash.svc.cluster.local:8080/;
 		proxy_read_timeout 180;
 	}
+	location /ldnfosession/ {
+		proxy_pass http://ac-ldnfosession-ws.demo-sla-datacash.svc.cluster.local:8080/;
+		proxy_read_timeout 180;
+    }
+	location /nwuser-ws/ {
+        proxy_pass http://ac-nwuser-ws.demo-sla-datacash.svc.cluster.local:8080/;
+        proxy_read_timeout 180;
+    }
 		
 	error_page   500 502 503 504  /50x.html;
 	
